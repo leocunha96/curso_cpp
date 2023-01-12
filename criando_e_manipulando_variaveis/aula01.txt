@@ -1,0 +1,13 @@
+Aula 01 
+
+	Nesta aula eh explicado o que eh a CPU e o que eh a memoria RAM. 
+
+	Lembrando que a RAM eh um local temporario, ela eh volátil.
+
+	Os programas executados no computador ficam carregados na memória RAM, é constantemente solicitado espaço na RAM.
+
+	A RAM não armazena conteúdo permanentemente!
+
+	No HD é onde fica salvo permanente.
+
+	Solicitar espaço está diratamente relacionado com as variáveis.
