@@ -6,12 +6,10 @@ bool bAchou;
 
 bAchou = 1;
 std :: cout << "Valor bAchou: " << bAchou << std :: endl;
-std :: cout << "Tamanho bAchou: " << sizeof(bAchou) << std :: endl;
 std :: cout << "Endereco bAchou: " << &bAchou << std :: endl;
 
 bAchou = 0;
 std :: cout << "Valor bAchou: " << bAchou << std :: endl;
-std :: cout << "Tamanho bAchou: " << sizeof(bAchou) << std :: endl;
 std :: cout << "Endereco bAchou: " << &bAchou << std :: endl;
 
 bAchou = true;
