@@ -18,14 +18,6 @@ int main () {
 
     cout << "Digite a senha de acesso: ";
     cin >> enteredPassword;
-    
-    while (enteredPassword != accessPassword)
-    {
-        cout << "\nAcesso Negado!" << "\n";
-        cout << "Digite a senha de acesso: ";
-        cin >> enteredPassword;
-    }
-    
 
     if (enteredPassword == accessPassword) {
         cout << "\nAcesso Permitido!" << "\n";
@@ -95,8 +87,8 @@ int main () {
             }
         }
 
-    // } else {
-    //     cout << "\nAcesso Negado!" << "\n";
-     }
+    } else {
+        cout << "\nAcesso Negado!" << "\n";
+    }
 
 }
