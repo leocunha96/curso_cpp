@@ -6,6 +6,21 @@ bool bSunny;
 bool bCarReady;
 bool bSalaryDeposited;
 
+void whatBeach ();
+void whatMovie ();
+void decision (bool choice1, bool choice2, bool choice3);
+bool questions ();
+void access ();
+
+int main () {
+
+    access();
+    questions();  
+    decision(bSunny, bCarReady, bSalaryDeposited);
+
+    return 0;
+}
+
 void whatBeach () {
 
     int beach;
@@ -114,13 +129,4 @@ void access () {
         cout << "\nAcesso Permitido!" << "\n";
         return;
 
-}
-
-int main () {
-
-    access();
-    questions();  
-    decision(bSunny, bCarReady, bSalaryDeposited);
-
-    return 0;
 }
