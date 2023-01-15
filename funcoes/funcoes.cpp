@@ -1,16 +1,11 @@
 #include <iostream>
 #include <string>
+#include "funcoes.h"
 
 using namespace std;
-bool bSunny;
-bool bCarReady;
-bool bSalaryDeposited;
-
-void whatBeach ();
-void whatMovie ();
-void decision (bool choice1, bool choice2, bool choice3);
-bool questions ();
-void access ();
+// bool bSunny;
+// bool bCarReady;
+// bool bSalaryDeposited;
 
 int main () {
 
