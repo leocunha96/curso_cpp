@@ -23,10 +23,12 @@ using namespace std;
 int main () {
     int numero;
     numero = 234;
-    int *ponteiro = &numero;
+    int* ponteiro = &numero;
     *ponteiro = 1456;
 
-    int *outroPtr = ponteiro;
+    //int* outroPtr = ponteiro;
+    void* outroPtr = ponteiro;
+    
 
     cout << "\nO valor de numero eh: " << *ponteiro << "\n";
     cout << "\nO endereco da memoria RAM em que ponteiro esta alocado eh: " << &ponteiro << "\n";
@@ -34,7 +36,7 @@ int main () {
     cout << "\nO endereco em que ponteiro aponta eh: " << ponteiro<< "\n";
     *ponteiro = numero + 200;
 
-    cout << "\nO valor de numero, usando outroPtr, eh: " << *outroPtr << "\n";
+    cout << "\nO valor de numero, usando outroPtr, eh: " << *((int*)outroPtr) << "\n";
 
     return 0;
 
