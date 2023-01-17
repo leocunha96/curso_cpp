@@ -25,11 +25,12 @@ void getNumbers (int &numbers) {
     int major;
     major = 0;
     int minor;
-    minor = 0;
+    //minor = 0;
     for (int i = 0; i < numbers; i++) {
         cout << "Digite o numero " << i+1 << "\n";
         cin >> population [i];
         populationOld [i] = population [i];
+        minor = population [i];
         for (int j = 0; j < numbers; j++) {
             if (population[i] == 0) {
                 minor = 0;
@@ -39,7 +40,7 @@ void getNumbers (int &numbers) {
                major = population [i];
                 
             }
-            if ((population [i] <= populationOld [j-1]) || (population [i] <= minor) ) {
+            if ((populationOld [j] < population [i]) && (populationOld [j] <= minor) ) {
                 minor = populationOld [j];
             }
         }
