@@ -1,0 +1,1 @@
+void getNumbers (float (&number)[10]);
