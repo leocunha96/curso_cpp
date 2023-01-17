@@ -17,6 +17,10 @@ int main () {
 void howMuchNumbers (int &numbers) {
     cout << "Digite a quantidade de numeros que deseja analisar\n";
     cin >> numbers;
+    while (numbers > 20){
+    cout << "Digite um numero menor que 20!\n";
+    cin >> numbers;
+    }
 }
 
 void getNumbers (int &numbers) {
@@ -43,38 +47,8 @@ void getNumbers (int &numbers) {
             if ((populationOld [j] < population [i]) && (populationOld [j] <= minor) ) {
                 minor = populationOld [j];
             }
-        }
-        
-        // if (i == 0) {
-        //     major = 0;
-        //     minor = 0;
-        // }
+        }   
 
-        // if (i > 0 && (population [i] >= populationOld[i-1])) {
-        //     major = population [i];
-           
-            
-            
-            
-        // } else {
-        //     major = populationOld [i-1];
-            
-        // }
-
-        // if (i> 0 && (population [i] < populationOld [i-1])) {
-        //     minor = population [i];
-        // } else {
-        //     minor = populationOld [i-1];
-        // }
-        
-        
-        // if (population [i] <= populationOld[i]) {
-        //     minor = population [i];
-        //     populationOld [i]
-            
-        // } else {
-        //     minor = populationOld [i];
-        // }
     }
     cout << "O menor numero eh: " << minor << "\n";
     cout << "O maior numero eh: " << major << "\n";
