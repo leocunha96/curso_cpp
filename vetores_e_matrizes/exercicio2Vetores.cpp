@@ -1,6 +1,7 @@
 #include <iostream>
 #include "exercicio2Vetores.h"
 
+
 using namespace std;
 
 //desenvolva um programa que receba o numero de elementos desejados (maximo de 20) armazena estes dados em um array;
@@ -32,6 +33,10 @@ void getNumbers (int &numbers) {
     int population [numbers] = {0};
     int major;
     int minor;
+    int tamanhoVetor;
+    tamanhoVetor = sizeof(population)/sizeof(int);
+    cout << "\nTamanho do vetor population!\n" << tamanhoVetor << "bytes\n";
+
     for (int i = 0; i < numbers; i++) {
         cout << "Digite o numero " << i+1 << "\n";
         cin >> population [i];
