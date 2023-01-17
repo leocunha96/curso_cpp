@@ -9,11 +9,17 @@ using namespace std;
 int main () {
     int numbers;
     numbers = 0;
+    char answer;
+    answer = 'n';
 
-    howMuchNumbers (numbers);
-    getNumbers (numbers);
+    do {
+        howMuchNumbers (numbers);
+        getNumbers (numbers);
+        cout << "\nDeseja rodar novamente?\n" << "Digite S para Sim ou N para Nao\n";
+        cin >> answer; 
+    } while ((answer == 's') || (answer == 'S'));
+    return 0;
 }
-
 void howMuchNumbers (int &numbers) {
     cout << "Digite a quantidade de numeros que deseja analisar\n";
     cin >> numbers;
@@ -22,35 +28,23 @@ void howMuchNumbers (int &numbers) {
     cin >> numbers;
     }
 }
-
 void getNumbers (int &numbers) {
     int population [numbers] = {0};
-    int populationOld [numbers] = {0};
     int major;
-    major = 0;
     int minor;
-    //minor = 0;
     for (int i = 0; i < numbers; i++) {
         cout << "Digite o numero " << i+1 << "\n";
         cin >> population [i];
-        populationOld [i] = population [i];
         minor = population [i];
-        for (int j = 0; j < numbers; j++) {
-            if (population[i] == 0) {
-                minor = 0;
-
-            }
-            if ((population [i] >= major) && (population [i] > populationOld [j-1])) {
-               major = population [i];
-                
-            }
-            if ((populationOld [j] < population [i]) && (populationOld [j] <= minor) ) {
-                minor = populationOld [j];
-            }
-        }   
-
+        major = population [i];
     }
+    for (int i = 0; i < numbers; i++) {
+        if (population[i] > major) {
+            major = population [i];
+            } else if (population [i] < minor) {
+            minor = population [i];             
+            }
+        }      
     cout << "O menor numero eh: " << minor << "\n";
     cout << "O maior numero eh: " << major << "\n";
-
 }
